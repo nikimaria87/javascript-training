@@ -1,0 +1,16 @@
+// Complete the reverseArray function below.
+function reverseArray(a) {
+   //Starting a for loop to create the function
+   //Adding a Math.floor so there are no decimals in the literal number of the position of each item in the array.
+    for(var i = 0; i <= Math.floor((a.length - 1) / 2); i++) {
+    //now I will create a variable called x and set it equal to "a" of i (which is the array named "a" and the for loop variable of i)
+        let x = a[i];
+    //now I will set the array "a" of i equal to the length of the "a" array but I will minus 1 and minus the value of i (which is 0) 
+        a[i] = a[a.length - 1 - i];
+    //now set the first variable equal to the last variable
+        a[a.length - 1 - i] = x;
+   //now we will cycle through the loop to attain the array "a" in reverse.
+    }
+    return a;
+    //the array started as 1, 4, 3, 2 and this code will make it 2, 3, 4, 1
+}
